@@ -2,13 +2,15 @@
   "name": "visitaurangabad",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "author": "Farheen",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^4.0.1",
     "express": "^4.16.4"
   }
 }
