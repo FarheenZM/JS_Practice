@@ -1,0 +1,33 @@
+.home-wrapper {
+  display: grid;
+  grid-template-columns: 50px, 50px, 50px, 50px;
+  grid-gap: 15px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sl sl sl sl"
+    "w w s s";
+  height: 100%;
+  margin: 5px;
+}
+
+.slider {
+  grid-area: sl;
+  border: 1px blue solid;
+}
+.weather {
+  grid-area: w;
+  border: 1px blue solid;
+}
+.sights {
+  grid-area: s;
+  border: 1px blue solid;
+
+  display: grid;
+  grid-template-columns: 25px, 25px;
+  grid-gap: 5px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sh sh"
+    "s1 s2"
+    "s3 s4";
+}

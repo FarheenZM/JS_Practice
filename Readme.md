@@ -1,4 +1,4 @@
-This app is a trial project to practice Node.js & Express
+This app is a trial project to practice Node.js, Express and React
 
 npm init - installs package.json file
 
