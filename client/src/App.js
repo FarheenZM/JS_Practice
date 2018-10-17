@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Customer from './components/customers/customer.js'
+import Header from './components/header.js'
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
       <div className="wrapper">
 
         <div className="header">
-          <Customer/>
+          <Header/>
         </div>
 
         <div className="slider">
