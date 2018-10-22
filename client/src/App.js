@@ -8,6 +8,7 @@ import About from "./components/about";
 import Attractions from './components/attractions.js'
 import Contact from "./components/contact";
 // import "./components/navbar.css"
+import Ellora from "./components/sights/ellora";
 
 class App extends Component {
   constructor () {
@@ -33,7 +34,7 @@ class App extends Component {
 
         </div>
 
-        <div id= "main" className="wrapper">
+        <div id="main" className="wrapper">
           <Router>
             <div className="header">
               <NavBar/>
@@ -44,9 +45,11 @@ class App extends Component {
             </div>
           </Router>
 
-          {/* <div className="body-content">
-          <Home/>
-        </div> */}
+          <div id="main-content" className="body-content">
+            <Router>
+                <Route path="/sights/ellora" component={Ellora}/>
+            </Router>
+          </div>
 
         <div className="footer">
           <footer>This is footer &Copy</footer>

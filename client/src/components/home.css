@@ -10,7 +10,7 @@
   margin: 5px;
 }
 
-.slider {
+.slider-wrapper {
   grid-area: sl;
   border: 1px blue solid;
 }
@@ -30,4 +30,108 @@
     "sh sh"
     "s1 s2"
     "s3 s4";
+  padding: 15px;
+}
+
+/* Slider images */
+.slider-wrapper, #slider, .slide-content {
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url('/images/Ajanta.jpg');
+}
+
+.slide2 {
+  background-image: url('/images/BibiKaMaqbara.jpg');
+}
+
+.slide3 {
+  background-image: url('/images/Ellora.jpg');
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: white;
+}
+
+p {
+  font-size: 2rem;
+  color: darkblue;
+}
+
+#slider a {
+  text-decoration: none;
+}
+
+/* Left & right arrows on the slider images */
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent white transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent white;
+  right: 0;
+  margin-right: 30px;
+}
+
+
+/* .sights div on home page */
+.sightHead {
+  grid-area: sh;
+  border: 1px yellow solid;
+}
+
+.sight1 {
+  grid-area: s1;
+  border: 1px yellow solid;
+}
+
+.sight2 {
+  grid-area: s2;
+  border: 1px yellow solid;
+}
+
+.sight3 {
+  grid-area: s3;
+  border: 1px yellow solid;
+}
+
+.sight4 {
+  grid-area: s4;
+  border: 1px yellow solid;
 }
