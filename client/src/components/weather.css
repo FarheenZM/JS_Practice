@@ -1,0 +1,17 @@
+#todays-detaildate {
+  text-align: left;
+}
+
+table {
+  /* display: inline;   */
+  margin-top: 20px;
+  width: 100%;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: solid 0.5px white;
+  background-color: lightgrey;
+  padding: 10px;
+}

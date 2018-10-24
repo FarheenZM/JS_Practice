@@ -8,7 +8,10 @@ import About from "./components/about";
 import Attractions from './components/attractions.js'
 import Contact from "./components/contact";
 // import "./components/navbar.css"
-import Ellora from "./components/sights/ellora";
+import Ajanta from "./components/sights/Ajanta";
+import BibiKaMaqbara from "./components/sights/BibiKaMaqbara";
+import Ellora from "./components/sights/Ellora";
+import Panchakki from "./components/sights/Panchakki";
 
 class App extends Component {
   constructor () {
@@ -47,12 +50,17 @@ class App extends Component {
 
           <div id="main-content" className="body-content">
             <Router>
+                <div>
+                <Route path="/sights/ajanta" component={Ajanta}/>
+                <Route path="/sights/bibikamaqbara" component={BibiKaMaqbara}/>
                 <Route path="/sights/ellora" component={Ellora}/>
+                <Route path="/sights/panchakki" component={Panchakki}/>
+              </div>
             </Router>
           </div>
 
         <div className="footer">
-          <footer>This is footer &Copy</footer>
+          <footer>by Farheen &copy; 2018</footer>
           ~built using React<img src={logo} className="App-logo" alt="React logo" />
         </div>
 

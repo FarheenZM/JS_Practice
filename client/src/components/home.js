@@ -89,7 +89,7 @@ class Home extends Component{
       </div>
 
       <div id='todays-weather' className="weather">
-        <p>Weather</p>
+        <p>Weather in Aurangabad</p>
         <Weather/>
       </div>
 
@@ -98,7 +98,7 @@ class Home extends Component{
           <p>Sights</p>
         </div>
         <div className="sight1">
-          <a href="/sights/bibiKaMaqbara">
+          <a href="/sights/bibikamaqbara">
             <img src="images/BibiKaMaqbara.jpg" alt="maqbara pic" height="250" width="250"/>
             <p>Bibi Ka Maqbara</p>
           </a>
