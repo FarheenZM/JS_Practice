@@ -9,11 +9,16 @@ class NavBar extends Component {
     this.state = {
     };
     this.openSideMenu = this.openSideMenu.bind(this);
+    this.searchHandler = this.searchHandler.bind(this);
   }
 
   openSideMenu() {
     document.getElementById('side-menu').style.width = '250px';
     document.getElementById('main').style.marginLeft = '250px';
+  }
+
+  searchHandler(event){
+    console.log(event.target.value);
   }
 
   render() {
@@ -36,6 +41,9 @@ class NavBar extends Component {
             <li><Link to="/attractions">ATTRACTIONS</Link></li>
             <li><Link to="/contact">CONTACT</Link></li>
           </ul>
+          <form>
+            <input type="text" onChange={this.searchHandler}/>
+          </form>
         </nav>
       </React.Fragment>
 

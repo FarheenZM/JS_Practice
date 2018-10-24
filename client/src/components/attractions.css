@@ -1,0 +1,35 @@
+.attractions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "ah ah ah"
+    "i1 i2 i3"
+    "i4 . .";
+}
+
+#attractions-head {
+  grid-area: ah;
+}
+
+#img1 {
+  grid-area: i1;
+}
+
+#img2 {
+  grid-area: i2;
+}
+
+#img3 {
+  grid-area: i3;
+}
+
+#img4 {
+  grid-area: i4;
+}
+
+.attractions img {
+  height: 300px;
+  width: 300px;
+}

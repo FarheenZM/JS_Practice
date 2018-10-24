@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './attractions.css'
 
 class Attractions extends Component{
 
@@ -12,7 +13,33 @@ class Attractions extends Component{
 
   render(){
     return(
-      <h1>Attractions will come here</h1>
+      <React.Fragment>
+        <div class="attractions">
+          <div id="attractions-head">
+            <h1>All Attractions</h1>
+          </div>
+          <div id="img1">
+            <a href="/sights/ajanta">
+              <img src="/images/Ajanta.jpg" alt="Ajanta"/>
+            </a>
+          </div>
+          <div id="img2">
+            <a href="/sights/bibikamaqbara">
+              <img src="/images/BibiKaMaqbara.jpg" alt="BibiKaMaqbara"/>
+            </a>
+          </div>
+          <div id="img3">
+            <a href="/sights/ellora">
+              <img src="/images/Ellora.jpg" alt="Ellora"/>
+            </a>
+          </div>
+          <div id="img4">
+            <a href="/sights/panchakki">
+              <img src="/images/Panchakki.jpg" alt="Panchakki"/>
+            </a>
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }

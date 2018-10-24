@@ -1,0 +1,43 @@
+.ajanta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "ah ah ah"
+    "ai ai ai"
+    "ad ad al"
+    "is is is";
+  padding: 10px;
+}
+
+#ajanta-head {
+  grid-area: ah;
+  border: solid green 1px;
+}
+
+#ajanta-image {
+  grid-area: ai;
+  border: solid green 1px;
+}
+
+#ajanta-details {
+  grid-area: ad;
+  border: solid green 1px;
+}
+
+#ajanta-location {
+  grid-area: al;
+  border: solid green 1px;
+}
+
+#ajanta-images {
+  grid-area: is;
+  border: solid green 1px;
+}
+
+#ajanta-images img {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}

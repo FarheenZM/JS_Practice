@@ -19,8 +19,22 @@ class Weather extends Component{
     // console.log(data);
     const div1 = document.getElementById('todays-weather'); //div from home.js
 
+    const div2 = document.getElementById('temp-with-image');
+
     const temp = document.getElementById('todays-temp');
     temp.innerText = data.main.temp + '\xB0C';// '\xB0C' used to display degree celcius symbol
+
+    const image = document.createElement('img');
+    if(data.weather[0].main === "Clouds"){
+      image.src = "https://openweathermap.org/img/w/03d.png";
+    }else if(data.weather[0].main === "Haze"){
+      image.src = "https://openweathermap.org/img/w/50n.png";
+    }else{
+      image.src = "https://openweathermap.org/img/w/01d.png";
+    }
+
+    temp.appendChild(image);
+    div2.appendChild(temp);
 
     const detaildate = document.getElementById('todays-detaildate');
     detaildate.innerText = data.weather[0].main + "\n" + new Date(data.dt*1000);
@@ -92,7 +106,7 @@ class Weather extends Component{
 
     tbl.appendChild(tblBody);
 
-    div1.appendChild(temp);
+    div1.appendChild(div2);
     div1.appendChild(detaildate);
     div1.appendChild(tbl);
 
@@ -107,14 +121,15 @@ class Weather extends Component{
   render(){
     return(
       <React.Fragment>
-        <div id='weather-images'>
-          <img src="https://openweathermap.org/img/w/01d.png"/>
-          <img src="https://openweathermap.org/img/w/02d.png"/>
-          <img src="https://openweathermap.org/img/w/03d.png"/>
-          <img src="https://openweathermap.org/img/w/04d.png"/>
-        </div>
 
-        <h1 id="todays-temp"></h1>
+          {/* <img src="https://openweathermap.org/img/w/01d.png"/> {/*sun*/}
+          {/* <img src="https://openweathermap.org/img/w/02d.png"/> {/*sun with cloud*/}
+          {/* <img src="https://openweathermap.org/img/w/03d.png"/> {/*cloud*/}
+          {/* <img src="https://openweathermap.org/img/w/04d.png"/> {/*cloud with black cloud*/}
+
+        <div id='temp-with-image'>
+          <h1 id="todays-temp"></h1>
+        </div>
         <div id="todays-detaildate"></div>
       </React.Fragment>
     )
